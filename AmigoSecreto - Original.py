@@ -59,9 +59,9 @@ quantidadeNomesExcel = len(excel['Nomes'])
 
 cont3 = 0
 while(cont3 < quantidadeNomesExcel):
-    EMAIL_ADRESS = 'thi.canato@gmail.com'
-    EMAIL_PASSWORD = 'thiago050406'
-
+    EMAIL_ADRESS = 
+    EMAIL_PASSWORD = 
+    
     msg = EmailMessage()
     msg['Subject'] = "Amigo secreto da Família Canato!"
     msg['From'] = EMAIL_ADRESS
