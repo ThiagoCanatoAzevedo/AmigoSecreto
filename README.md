@@ -1,2 +1,2 @@
 # AmigoSecreto
-Programa para quem quiser fazer um sorteio para seu amigo secreto
+Programa para quem quer fazer um sorteio para seu amigo secreto
