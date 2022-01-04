@@ -7,7 +7,7 @@ from email.message import EmailMessage
 
 os.system('cls')
 
-excel = pd.read_excel (r"C:\Users\thica\OneDrive\Área de Trabalho\AmigoSecreto.xlsx", engine='openpyxl' )
+excel = pd.read_excel (r"CAMINHO DO SEU EXCEL COM NOMES DOS PARTICIPANTES", engine='openpyxl' )
 numerosSorteados     = []
 
 lenght_participantes = 0
@@ -39,8 +39,7 @@ while(cont < lenght_participantes):
     amigoSecretoParticipante      = excel['Nomes'][randomizacao]
     amigoSecretoParticipanteEmail = excel['Emails'][randomizacao]
 
-    #print(participante, ' tirou: ', amigoSecretoParticipante, ' (email ', excel['Emails'][cont],')\n')
-    
+  
     numerosSorteados.append(randomizacao)
 
     listaFinalNomesSorteados = list(OrderedDict.fromkeys(numerosSorteados))
@@ -51,16 +50,14 @@ while(cont < lenght_participantes):
 print(listaFinalNomesSorteados) #-----> Números Sorteados 
 
 
-#print(excel['Pedidos'][lis])
-
 quantidadeNomesExcel = 0
 quantidadeNomesExcel = len(excel['Nomes'])
 
 
 cont3 = 0
 while(cont3 < quantidadeNomesExcel):
-    EMAIL_ADRESS = 
-    EMAIL_PASSWORD = 
+    EMAIL_ADRESS = SEU EMAIL
+    EMAIL_PASSWORD = SUA SENHA
     
     msg = EmailMessage()
     msg['Subject'] = "Amigo secreto da Família Canato!"
