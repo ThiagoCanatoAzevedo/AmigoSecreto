@@ -1,3 +1,3 @@
-senha = 'enviaemails02'
+senha = 'senha'
 
-email = 'enviadordeemails02@gmail.com'
+email = 'email'
