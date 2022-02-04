@@ -61,26 +61,26 @@ parte_inicio()
 
 lenght_participantes = len(excel ['Nomes'])
 
-#def parte_fim ():
-#global cont3, numerosSorteados, lenght_participantes, linhas
-    
-print(cont3)
-
-while(cont3 < lenght_participantes):
-    EMAIL_ADRESS = email
-    EMAIL_PASSWORD = senha
+def parte_fim ():
+    global cont3, numerosSorteados, lenght_participantes
         
-    msg = EmailMessage()
-    msg['Subject'] = "Amigo secreto da Família Canato!"
-    msg['From'] = EMAIL_ADRESS
-    msg['To'] = excel['Emails'][cont3]
-    msg.set_content("Você, infelizmente, tirou: " +  excel['Nomes'][numerosSorteados[cont3]] + '\n' + 'Essa pessoa gostaria de receber: ' + excel['Pedidos'][numerosSorteados[cont3]])
-    
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login(EMAIL_ADRESS, EMAIL_PASSWORD)
-        smtp.send_message(msg)
-        print("Email enviado")
+    print(cont3)
+
+    while(cont3 < lenght_participantes):
+        EMAIL_ADRESS = email
+        EMAIL_PASSWORD = senha
             
-    cont3+=1
+        msg = EmailMessage()
+        msg['Subject'] = "Amigo secreto da Família Canato!"
+        msg['From'] = EMAIL_ADRESS
+        msg['To'] = excel['Emails'][cont3]
+        msg.set_content("Você, infelizmente, tirou: " +  excel['Nomes'][numerosSorteados[cont3]] + '\n' + 'Essa pessoa gostaria de receber: ' + excel['Pedidos'][numerosSorteados[cont3]])
+        
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login(EMAIL_ADRESS, EMAIL_PASSWORD)
+            smtp.send_message(msg)
+            print("Email enviado")
+                
+        cont3+=1
 
 #parte_fim()
