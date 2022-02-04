@@ -63,8 +63,6 @@ lenght_participantes = len(excel ['Nomes'])
 
 def parte_fim ():
     global cont3, numerosSorteados, lenght_participantes
-        
-    print(cont3)
 
     while(cont3 < lenght_participantes):
         EMAIL_ADRESS = email
@@ -74,7 +72,9 @@ def parte_fim ():
         msg['Subject'] = "Amigo secreto da Família Canato!"
         msg['From'] = EMAIL_ADRESS
         msg['To'] = excel['Emails'][cont3]
-        msg.set_content("Você, infelizmente, tirou: " +  excel['Nomes'][numerosSorteados[cont3]] + '\n' + 'Essa pessoa gostaria de receber: ' + excel['Pedidos'][numerosSorteados[cont3]])
+        msg.set_content("Você, infelizmente, tirou: " +  excel['Nomes'][numerosSorteados[cont3]] + 
+        ' (Que dó de você, sei que você não queria tirar essa pessoa)' +
+        '\n' + 'Essa pessoa gostaria de receber: ' + excel['Pedidos'][numerosSorteados[cont3]])
         
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(EMAIL_ADRESS, EMAIL_PASSWORD)
@@ -83,4 +83,4 @@ def parte_fim ():
                 
         cont3+=1
 
-#parte_fim()
+parte_fim()
