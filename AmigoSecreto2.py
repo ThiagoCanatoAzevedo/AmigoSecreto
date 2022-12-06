@@ -8,7 +8,7 @@ from DadosEnviarEmails import senha, email
 
 os.system('cls')
 
-excel = pd.read_excel (r"C:\Users\thica\OneDrive\Área de Trabalho\AmigoSecreto.xlsx", engine='openpyxl')
+excel = pd.read_excel (r"", engine='openpyxl')
 
 numerosSorteados = []
 lenght_participantes = 0
@@ -65,8 +65,8 @@ def parte_fim ():
     global cont3, numerosSorteados, lenght_participantes
 
     while(cont3 < lenght_participantes):
-        EMAIL_ADRESS = email
-        EMAIL_PASSWORD = senha
+        EMAIL_ADRESS = 
+        EMAIL_PASSWORD = 
             
         msg = EmailMessage()
         msg['Subject'] = "Amigo secreto da Família Canato!"
